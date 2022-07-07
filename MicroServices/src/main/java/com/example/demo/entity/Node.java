@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee_profile")
+@Table(name = "node")
 public class Node {
 
     @Id

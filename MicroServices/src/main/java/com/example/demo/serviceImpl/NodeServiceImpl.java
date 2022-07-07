@@ -4,13 +4,10 @@ import com.example.demo.entity.Node;
 import com.example.demo.repo.NodeRepository;
 import com.example.demo.service.NodeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class NodeServiceImpl implements NodeService {
@@ -26,8 +23,13 @@ public class NodeServiceImpl implements NodeService {
     }
 
     @Override
-    public Optional<Node> getNode(int id) {
+    public List<Node> getNode(int id) {
         return nodeRepository.findById(id);
+    }
+
+    @Override
+    public List<Node> getAllNodes() {
+        return nodeRepository.findAll();
     }
 
     @Override

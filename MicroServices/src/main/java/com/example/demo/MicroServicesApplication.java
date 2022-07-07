@@ -6,8 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
-@EnableJpaRepositories(basePackageClasses= {NodeRepository.class})
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+//@EnableJpaRepositories(basePackageClasses= {NodeRepository.class})
+@SpringBootApplication
 public class MicroServicesApplication {
 
 	public static void main(String[] args) {
